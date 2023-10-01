@@ -24,7 +24,6 @@ public class Shop_Manager : MonoBehaviour
     public TextMeshProUGUI Money_txt;
     public TextMeshProUGUI Level_txt;
     public TextMeshProUGUI Exp_txt;
-    public Scrollbar Exp_Scroll;
 
     public int Money;
     private int Level = 0;
@@ -72,10 +71,13 @@ public class Shop_Manager : MonoBehaviour
             UpdateMoney(-2);
             RefreshShop();
         }
+
+
         if (Input.GetKeyDown(KeyCode.E) )
         {
             UpdateMoney(10);
         }
+
         if (Input.GetKeyDown(KeyCode.F) && Level <= LevelMax)
         {
             
@@ -97,12 +99,8 @@ public class Shop_Manager : MonoBehaviour
 
 
         }
-        if(LevelExp[Level]!= 00)
-        {
-            Exp_Scroll.size = exp / LevelExp[Level];
-            Debug.Log(exp);
-            Debug.Log(LevelExp[Level]);
-        }
+
+        
         
 
 
